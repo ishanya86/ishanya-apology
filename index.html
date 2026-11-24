@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Sorry For You ❤️</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #fff0f5;
+  color: #873d59;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 100vh;
+  padding: 65px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: clamp(35px, 7vw, 55px);
+  color: #d94d7c;
+  margin: 20px 0;
+}
+
+h2 {
+  color: #d94d7c;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 17px;
+  max-width: 600px;
+  margin: 12px auto;
+}
+
+button {
+  border: none;
+  padding: 14px 27px;
+  border-radius: 30px;
+  background: #e75b8c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 12px;
+  transition: .3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: #c93770;
+}
+
+.card {
+  background: white;
+  padding: 30px 22px;
+  width: 100%;
+  max-width: 650px;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px #e9a6bf66;
+}
+
+.heart {
+  font-size: 75px;
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+  50% { transform: scale(1.2); }
+}
+
+#home {
+  background: linear-gradient(140deg, #ffe1ec, #fff5f8);
+}
+
+#memories {
+  background: #fff8fa;
+}
+
+#letter {
+  background: linear-gradient(140deg, #ffe6ef, #fff3f6);
+}
+
+#missme {
+  background: #fff8fa;
+}
+
+#surprise {
+  background: linear-gradient(140deg, #ffc9dc, #fff0f5);
+}
+
+.envelope {
+  font-size: 90px;
+  cursor: pointer;
+  transition: .3s;
+  margin: 20px;
+}
+
+.envelope:hover {
+  transform: scale(1.15);
+}
+
+#secret {
+  display: none;
+  background: #fff0f5;
+  padding: 25px;
+  border-radius: 20px;
+  margin-top: 20px;
+  max-width: 550px;
+}
+
+#secret.show {
+  display: block;
+  animation: appear .8s ease;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.final-heart {
+  font-size: 120px;
+  animation: heartbeat .8s infinite;
+}
+
+footer {
+  padding: 20px;
+  color: #b86b88;
+}
+
+/* Floating hearts */
+
+.floating {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  z-index: 5;
+  animation: floatUp 6s linear forwards;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SCREEN 1: OPENING -->
+
+<section id="home">
+
+  <div class="heart">💗</div>
+
+  <p>A little something for my manishuuu...</p>
+
+  <h1>Hey, manish!</h1>
+
+  <p>
+    I made something for you.
+    It comes straight from my heart.
+  </p>
+
+  <button onclick="startWebsite()">
+    Open your surprise 💌
+  </button>
+
+  <p style="font-size:13px">
+    (P.S. Please don't be mad at me 🥺)
+  </p>
+
+</section>
+
+
+<!-- SCREEN 2: OUR MEMORIES -->
+
+<section id="memories">
+
+  <div class="heart">💕</div>
+
+  <h1>I am really sorry</h1>
+
+  <p>
+    I know I said something unintentionally
+     without even thinking once how it would make u feel I regret saying any of that.
+  </p>
+
+  <p>
+    please forgive me I can't take your ignorance,
+    I will make sure to think and say my words properly next time.
+  </p>
+
+  <p>
+    I know it made u feel miserable but I never
+    meant it in the way you thought. ❤️
+  </p>
+
+  <p>
+    please forgive me.
+  </p>
+
+  <button onclick="next('letter')">
+    There's something I need to say 💌
+  </button>
+
+</section>
+
+
+<!-- SCREEN 3: APOLOGY -->
+
+<section id="letter">
+
+  <div class="card">
+
+    <div class="heart">🥺</div>
+
+    <h1>I'm Sorry.</h1>
+
+    <p>Dear manish,</p>
+
+    <p>
+      I know things haven't been perfect,
+      and I know I've made mistakes.
+    </p>
+
+    <p>
+      I'm genuinely sorry for hurting you.
+      I never wanted to make you feel that way.
+    </p>
+
+    <p>
+      I might not always say the right things,
+      and I might not always get everything right,
+      but that doesn't mean you matter any less to me.
+    </p>
+
+    <p>
+      I wish I could go back and change the things
+      that hurt you. All I can do now is take
+      responsibility and try to do better.
+    </p>
+
+    <h2>You're important to me. ❤️</h2>
+
+    <button onclick="next('missme')">
+      One more thing... 💗
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- SCREEN 4: OPEN WHEN YOU MISS ME -->
+
+<section id="missme">
+
+  <h1>Open When You Miss Me 💌</h1>
+
+  <p>
+    I have a tiny letter hidden just for you.
+  </p>
+
+  <div class="envelope" onclick="openLetter()">
+    💌
+  </div>
+
+  <button onclick="openLetter()">
+    Open your secret letter
+  </button>
+
+  <div id="secret">
+
+    <h2>Hey baby! 🥹❤️</h2>
+
+    <p>
+      If you're reading this, I'm guessing
+      you miss me a little.
+    </p>
+
+    <p>
+      Just remember that even when we're not
+      together, you're still someone I care
+      about so much.
+    </p>
+
+    <p>
+      I wish I could give you a hug right now.
+      Until then, imagine the biggest hug ever!
+    </p>
+
+    <h2>Sending you endless love and pls forgive me🫂</h2>
+
+  </div>
+
+  <button onclick="next('surprise')">
+    One LAST surprise! 🎀
+  </button>
+
+</section>
+
+
+<!-- SCREEN 5: FINAL SURPRISE -->
+
+<section id="surprise">
+
+  <div class="final-heart">❤️</div>
+
+  <h1>Can We Be Okay Again?</h1>
+
+  <p>
+    I don't expect everything to become perfect
+    instantly.
+  </p>
+
+  <p>
+    I just hope we can talk, understand each other,
+    and make things better.
+  </p>
+
+  <h2>Will you forgive me? 🥺</h2>
+
+  <button onclick="answer('yes')">
+    Of course, I forgive you ❤️
+  </button>
+
+  <button onclick="answer('hug')">
+    Come give me a hug 🫂
+  </button>
+
+  <button onclick="answer('time')">
+    I need a little time 💗
+  </button>
+
+  <h2 id="finalMessage"></h2>
+
+  <footer>
+    Made with love, just for you. 💕
+  </footer>
+
+</section>
+
+
+<script>
+
+// Smooth navigation
+
+function next(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+// Opening screen
+
+function startWebsite() {
+  next("memories");
+}
+
+// Open secret letter
+
+function openLetter() {
+  document.getElementById("secret").classList.add("show");
+}
+
+// Final answers
+
+function answer(choice) {
+
+  let message = "";
+
+  if(choice === "yes") {
+    message = "THANK YOU!! 🥹❤️ You just made my day!";
+  }
+
+  if(choice === "hug") {
+    message = "BIGGEST HUG COMING YOUR WAY!! 🫂💕";
+  }
+
+  if(choice === "time") {
+    message = "Take all the time you need. I'll respect that. ❤️";
+  }
+
+  document.getElementById("finalMessage").innerHTML = message;
+
+  createHearts(30);
+}
+
+// Floating hearts animation
+
+function createHearts(count) {
+
+  for(let i = 0; i < count; i++) {
+
+    let heart = document.createElement("div");
+
+    heart.innerHTML = ["❤️","💕","💗","💖"][
+      Math.floor(Math.random()*4)
+    ];
+
+    heart.className = "floating";
+
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.fontSize = (20 + Math.random()*25) + "px";
+    heart.style.animationDuration = (3 + Math.random()*4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 7000);
+  }
+}
+
+// Continuous background hearts
+
+setInterval(() => createHearts(1), 900);
+
+</script>
+
+</body>
+</html>
